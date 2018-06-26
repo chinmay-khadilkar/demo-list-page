@@ -1,0 +1,21 @@
+<button type="button" class="btn btn-primary" [disabled]="isNextButtonDisable()" (click)="nextButtonClick()">Next</button><p>{{startPoint}}....{{endPoint}}</p>
+<button type="button" class="btn btn-primary" [disabled]="isPreviousButtonDisable()" (click)="previousButtonClick()">Previous</button>
+
+
+<table class="table table-striped table-responsive">
+  <tbody>
+      <tr class="header">
+          <th class="col-xs-1">#</th>
+          <th class="col-xs-3">Name</th>
+          <th class="col-xs-3">Power</th>
+          <th class="col-xs-1">Universe</th>
+        </tr>
+        <tr *ngFor="let hero of partialList; let i=index">
+          <th>{{i+1}}</th>
+          <th>{{hero.name}}</th>
+          <th>{{hero.power}}</th>
+          <th>{{hero.universe}}</th>
+        </tr>
+
+      </tbody>
+</table>
